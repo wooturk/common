@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models;
 
-class Brand extends Model
+class User extends Model
 {
     use HasFactory;
-	protected $fillable = ['name', 'code', 'rate', 'sort_order','state'];
+	protected $fillable = ['name', 'email', 'password'];
 }
