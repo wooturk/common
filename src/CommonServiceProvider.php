@@ -25,8 +25,8 @@ class CommonServiceProvider extends ServiceProvider
 	{
 		//
 		$this->loadHelpers();
-		if(function_exists('tulparstudyo_register_services')){
-			tulparstudyo_register_services();
+		if(function_exists('wooturk_register_services')){
+			wooturk_register_services();
 		}
 		Route::get('/common/test', function () {
 			return common_test();

@@ -1,5 +1,5 @@
 <?php
-function tulparstudyo_register_services(){
+function wooturk_register_services(){
 	$ServiceProviders=[
 		'Wooturk\\AuthServiceProvider',
 		'Wooturk\\AddressServiceProvider',
