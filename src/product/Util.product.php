@@ -1,16 +1,16 @@
 <?php
-function get_brands(Array $filter){
+function get_products(Array $filter){
 
 }
-function get_brand(Int $id){
+function get_product(Int $id){
 
 }
-function create_brand( Array $brand){
+function create_product( Array $brand){
 
 }
-function update_brand(Int $id, Array $brand){
+function update_product(Int $id, Array $brand){
 
 }
-function delete_brand(Int $id){
+function delete_product(Int $id){
 
 }

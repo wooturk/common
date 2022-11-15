@@ -1,6 +1,6 @@
 <?php
 
-namespace Tulparstudyo;
+namespace Wooturk;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

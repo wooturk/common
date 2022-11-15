@@ -1,10 +1,11 @@
 <?php
-namespace Tulparstudyo;
+namespace Wooturk;
 class Response{
 	static public function success($message, $data=[]){
 		return[
 			'status'=>1,
 			'message'=>$message,
+			'count'=>is_countable($data)?count($data):0,
 			'data'=>$data
 		];
 	}

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tulparstudyo;
+namespace Wooturk;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
@@ -25,15 +25,15 @@ class CommonServiceProvider extends ServiceProvider
 	{
 		//
 		$this->loadHelpers();
+		if(function_exists('tulparstudyo_register_services')){
+			tulparstudyo_register_services();
+		}
 		Route::get('/common/test', function () {
 			return common_test();
 		});
 	}
 	private function loadHelpers(){
-		$utils = [
-			'brand',
-			'user',
-		];
+		$utils = [ 'address', 'brand', 'category', 'customer', 'order', 'product', 'user', ];
 
 		if(is_file(__DIR__ . "/Util.common.php" )){
 			include_once( __DIR__ . "/Util.common.php" );

@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models;
 
-class BrandDescription extends Model
+class District extends Model
 {
     use HasFactory;
-
+	protected $fillable = ['city_id', 'name', 'code', 'rate', 'sort_order','state'];
 }

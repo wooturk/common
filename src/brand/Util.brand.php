@@ -1,7 +1,7 @@
 <?php
 
-use Tulparstudyo\Brand;
-use Tulparstudyo\BrandDescription;
+use Wooturk\Brand;
+use Wooturk\BrandDescription;
 
 function get_brands(Array $filter){
 	return Brand::get();
