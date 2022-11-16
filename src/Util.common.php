@@ -1,4 +1,5 @@
 <?php
+echo "oldu.";
 function wooturk_register_services(){
 	$ServiceProviders=[
 		'Wooturk\\AuthServiceProvider',
