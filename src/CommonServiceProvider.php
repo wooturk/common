@@ -25,9 +25,7 @@ class CommonServiceProvider extends ServiceProvider
 	{
 		//
 		$this->loadHelpers();
-		if(function_exists('wooturk_register_services')){
-			wooturk_register_services();
-		}
+		$this->wooturk_register_services();
 		Route::get('/common/test', function () {
 			return common_test();
 		});
@@ -41,6 +39,23 @@ class CommonServiceProvider extends ServiceProvider
 		foreach($utils as $util){
 			if(is_file(__DIR__ . "/$util/Util.$util.php" )){
 				include_once(__DIR__ . "/$util/Util.$util.php" );
+			}
+		}
+	}
+	function wooturk_register_services(){
+		$ServiceProviders=[
+			'Wooturk\\AuthServiceProvider',
+			'Wooturk\\AddressServiceProvider',
+			'Wooturk\\BrandServiceProvider',
+			'Wooturk\\CategoryServiceProvider',
+			'Wooturk\\CustomerServiceProvider',
+			'Wooturk\\OrderServiceProvider',
+			'Wooturk\\ProductServiceProvider',
+			'Wooturk\\UserServiceProvider',
+		];
+		foreach($ServiceProviders as $ServiceProvider){
+			if(class_exists($ServiceProvider)){
+				app()->register( \Wooturk\AuthServiceProvider::class );
 			}
 		}
 	}
