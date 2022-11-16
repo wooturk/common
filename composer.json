@@ -25,6 +25,9 @@
         "ext-tokenizer": "*"
     },
     "autoload": {
+        "files": [
+            "helpers/helper.php"
+        ],
         "classmap": [
             "src/"
         ]
