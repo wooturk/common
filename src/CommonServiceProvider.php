@@ -55,7 +55,7 @@ class CommonServiceProvider extends ServiceProvider
 		];
 		foreach($ServiceProviders as $ServiceProvider){
 			if(class_exists($ServiceProvider)){
-				app()->register( \Wooturk\AuthServiceProvider::class );
+				app()->register( $ServiceProvider );
 			}
 		}
 	}

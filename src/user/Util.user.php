@@ -3,7 +3,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 function get_users(Array $filter){
-
+	return User::get();
 }
 function find_user(Array $filter){
 	$email = isset($filter['email'])?$filter['email']:'';
@@ -32,6 +32,8 @@ function create_user( Array $data){
 function update_user(Int $id, Array $data){
 	$row = User::find($id);
 	if($row){
+		unset($data['email']);
+		$data['password'] = bcrypt($data['password']);
 		User::where('id', $id)->update($data);
 		return get_user($id);
 	}
