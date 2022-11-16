@@ -30,7 +30,12 @@ function create_user( Array $data){
 	return $row;
 }
 function update_user(Int $id, Array $data){
-
+	$row = User::find($id);
+	if($row){
+		User::where('id', $id)->update($data);
+		return get_user($id);
+	}
+	return false;
 }
 function delete_user(Int $id){
 	return User::destroy($id);
