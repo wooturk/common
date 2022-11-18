@@ -46,12 +46,6 @@
         ],
         "post-update-cmd": [
             "php -v"
-        ],
-        "post-root-package-install": [
-            "php -v"
-        ],
-        "post-create-project-cmd": [
-            "php -v"
         ]
     }
 }
