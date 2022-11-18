@@ -2,10 +2,10 @@
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
-function get_users(Array $filter){
+function get_customers(Array $filter){
 	return User::get();
 }
-function find_user(Array $filter){
+function find_customer(Array $filter){
 	$email = isset($filter['email'])?$filter['email']:'';
 	$password = isset($filter['password'])?$filter['password']:'';
 	if($email && $password){
@@ -18,10 +18,10 @@ function find_user(Array $filter){
 	}
 	return false;
 }
-function get_user(Int $id){
+function get_customer(Int $id){
 	return User::find($id);
 }
-function create_user( Array $data){
+function create_customer( Array $data){
 	$row = User::create([
 		'name'=>$data['name'],
 		'email'=>$data['email'],
@@ -29,16 +29,16 @@ function create_user( Array $data){
 	]);
 	return $row;
 }
-function update_user(Int $id, Array $data){
+function update_customer(Int $id, Array $data){
 	$row = User::find($id);
 	if($row){
 		unset($data['email']);
 		$data['password'] = bcrypt($data['password']);
 		User::where('id', $id)->update($data);
-		return get_user($id);
+		return get_customer($id);
 	}
 	return false;
 }
-function delete_user(Int $id){
+function delete_customer(Int $id){
 	return User::destroy($id);
 }
