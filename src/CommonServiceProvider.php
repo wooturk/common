@@ -52,4 +52,7 @@ class CommonServiceProvider extends ServiceProvider
 			}
 		}
 	}
+	static function Install(){
+		echo "Kurulum Tamamlandı";
+	}
 }
