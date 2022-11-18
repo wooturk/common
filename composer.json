@@ -22,7 +22,15 @@
         "php": "^7.2 || ^8.0",
         "ext-xmlwriter": "*",
         "ext-dom": "*",
-        "ext-tokenizer": "*"
+        "ext-tokenizer": "*",
+        "wooturk/auth": "dev-main",
+        "wooturk/address": "dev-main",
+        "wooturk/user": "dev-main",
+        "wooturk/customer": "dev-main",
+        "wooturk/brand": "dev-main",
+        "wooturk/product": "dev-main",
+        "wooturk/order": "dev-main",
+        "wooturk/category": "dev-main"
     },
     "autoload": {
         "files": [
