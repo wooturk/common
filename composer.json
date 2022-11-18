@@ -39,13 +39,5 @@
         "classmap": [
             "src/"
         ]
-    },
-    "scripts": {
-        "post-autoload-dump": [
-            "php -v"
-        ],
-        "post-update-cmd": [
-            "php -v"
-        ]
     }
 }
