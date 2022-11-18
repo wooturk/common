@@ -41,8 +41,17 @@
         ]
     },
     "scripts": {
-        "test": "phpunit",
-        "do-something": "MyVendor\\MyClass::doSomething"
-        "my-cmd": "MyVendor\\MyCommand"
+        "post-autoload-dump": [
+            "@php -v"
+        ],
+        "post-update-cmd": [
+            "@php -v"
+        ],
+        "post-root-package-install": [
+            "@php -v"
+        ],
+        "post-create-project-cmd": [
+            "@php -v"
+        ]
     }
 }
