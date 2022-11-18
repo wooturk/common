@@ -42,16 +42,16 @@
     },
     "scripts": {
         "post-autoload-dump": [
-            "@php -v"
+            "php -v"
         ],
         "post-update-cmd": [
-            "@php -v"
+            "php -v"
         ],
         "post-root-package-install": [
-            "@php -v"
+            "php -v"
         ],
         "post-create-project-cmd": [
-            "@php -v"
+            "php -v"
         ]
     }
 }
