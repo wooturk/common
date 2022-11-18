@@ -53,6 +53,18 @@ class CommonServiceProvider extends ServiceProvider
 		}
 	}
 	static function Install(){
-		echo "Kurulum Tamamlandı";
+		$str = "Wooturk Kurulumu Tamamlandı";
+		echo "\033[36m$str \033[0m\n";
+		$str = "config/app.php içerisine \033[31mWooturk\CommonServiceProvider::class\033[0m ekleyiniz";
+		echo "\033[36m$str \033[0m\n";
+		if( $utils = get_services() ){
+			$str = "Kurulu Servisler";
+			echo "\033[36m$str \033[0m\n";
+			$sira = 1;
+			foreach($utils as $util){
+				$str = "  ".($sira++).".".$util['name'];
+				echo "\033[36m$str \033[0m\n";
+			}
+		}
 	}
 }
