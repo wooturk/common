@@ -9,5 +9,5 @@ use App\Models;
 class Brand extends Model
 {
     use HasFactory;
-	protected $fillable = ['name', 'code', 'rate', 'sort_order','state'];
+	protected $fillable = ['name', 'code', 'slug', 'rate', 'sort_order','status'];
 }

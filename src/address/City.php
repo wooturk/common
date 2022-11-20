@@ -9,5 +9,5 @@ use App\Models;
 class City extends Model
 {
     use HasFactory;
-	protected $fillable = ['country_id', 'name', 'code', 'sort_order','state'];
+	protected $fillable = ['country_id', 'name', 'code', 'sort_order','status'];
 }

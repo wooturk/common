@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models;
 
-class Country extends Model
+class BrandModel extends Model
 {
     use HasFactory;
-	protected $fillable = ['name', 'code', 'sort_order','status'];
+	protected $fillable = ['name', 'brand_id', 'parent_id', 'code', 'code', 'slug', 'rate', 'sort_order','status'];
 }

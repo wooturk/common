@@ -4,6 +4,7 @@ namespace Wooturk;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
+
 class CommonServiceProvider extends ServiceProvider
 {
 	/**

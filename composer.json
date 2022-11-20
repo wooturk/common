@@ -30,7 +30,8 @@
         "wooturk/brand": "dev-main",
         "wooturk/product": "dev-main",
         "wooturk/order": "dev-main",
-        "wooturk/category": "dev-main"
+        "wooturk/category": "dev-main",
+        "wooturk/option": "dev-main"
     },
     "autoload": {
         "files": [

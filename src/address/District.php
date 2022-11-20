@@ -9,5 +9,5 @@ use App\Models;
 class District extends Model
 {
     use HasFactory;
-	protected $fillable = ['city_id', 'name', 'code', 'rate', 'sort_order','state'];
+	protected $fillable = ['city_id', 'name', 'code', 'rate', 'sort_order','status'];
 }
